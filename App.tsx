@@ -1,9 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+
+import { SingIn } from './src/screens/SignIn';
 
 const App = () => {
   return (
-    <View/>
+    <SingIn/>
   );
 }
 
