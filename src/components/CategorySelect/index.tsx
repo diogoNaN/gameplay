@@ -9,12 +9,14 @@ import { Category } from '../Category';
 
 type DataProps = {
   selectedCategory: string;
-  setCategory: (categoryId: string) => void; 
+  setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean; 
 } 
 
 const CategorySelect = ({
   selectedCategory,
   setCategory,
+  hasCheckBox = false,
 }: DataProps) => {
 
   return (
@@ -32,6 +34,7 @@ const CategorySelect = ({
           icon={category.icon}
           checked={category.id === selectedCategory}
           onPress={() => setCategory(category.id)}
+          hasCheckBox={hasCheckBox}
         />
       )) }
 
